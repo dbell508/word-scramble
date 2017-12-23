@@ -1,7 +1,9 @@
 // GLOBAL VARIABLES
 var message = document.getElementById('message');
-var message1 = document.getElementById('message1');
 var wordy = document.getElementById('wordy');
+var results = document.getElementById('results');
+
+
 var myArr = ['javascript', 'hello', 'world', 'course'];
 window.onload = sWord;
 var randomWord;
@@ -15,26 +17,25 @@ function sWord(){
 	var s = '';
 	var wLength = w.length;
 
-
 	for(var i = 0; i < wLength; i++){
 		var x = Math.floor(Math.random()*w.length);
 		s += w[x];
 		w = w.substr(0,x) + w.substr(x+1);
 	}
 
-	message.innerHTML = 'Unscramble the word:';
+	message.innerHTML = 'See how many words you can unscramble!';
 	s = s.toUpperCase();
 	wordy.innerText = s;
-
 }
 
 // Collect Users Guess - Check to see if correct
 function rGuess(){
 	var guess = document.getElementById('myString').value;
 	if(guess.toLowerCase() == randomWord.toLowerCase()){
-		message1.innerHTML = 'CORRECT! Damn You Smart!';
+		results.innerHTML = 'CORRECT!';
 	} else {
-		message1.innerHTML = 'WRONG! It was ' + randomWord;
+		results.innerHTML = 'WRONG!';
 	}
 	sWord();
 }
+

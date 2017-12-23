@@ -1,15 +1,77 @@
 body {
 	background-color: #43e866;
+	font-family: 'Bungee', cursive;
+}
 
+.gameTitle{
+	font-family: 'Bungee', cursive;
 }
 
 .wordyGame {
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 10%;
+}
+
+#wordy{
 }
 
 #wordy {
-	margin: 50px;
-	font-size: 46px;
+	margin: 50px auto;
+	width: 75%;
+	font-size: 50px;
 	font-weight: bold;
+	background-color: #32ae4c;
+	height: 75px;
+	padding: 10px;
+	border-radius: 5px;
+
+}
+
+#myString {
+	background:none;
+	border: none;
+	border-bottom: 1px solid #333;
+	width: 400px;
+	text-align: center;
+	font-size: 18px;
+	padding: 10px;
+}
+
+/*INPUT PLACEHOLDER*/
+::-webkit-input-placeholder { /* Chrome */
+  color: #32ae4c;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #32ae4c;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #32ae4c;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #32ae4c;
+  opacity: 1;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+#sBtn {
+	border: none;
+	border-radius: 5px;
+	background-color: #000;
+	color: #43e866;
+	width: 250px;
+	height: 50px;
+	font-weight: bold;
+	margin: 25px;
+	padding-top: 5px;
+}
+
+#sBtn:hover{
+	background-color: #333;
 }

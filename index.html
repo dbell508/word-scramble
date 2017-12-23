@@ -10,7 +10,8 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-		
+
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
 
   	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -18,11 +19,15 @@
 <body>
 	<div class="container wordyGame">
 		<div class="row">
-			<div id="message">Complete JavaScript Course</div>
+			<h1 class="gameTitle">WORDY GAME</h1>
+			<div id="message"></div>
 			<h2 id="wordy"></h2>
 
-			<input type="text" id="myString" placeholder="Guess the word">
-			<input type="button" value="Guess" onclick="rGuess()">
+			<input type="text" id="myString" placeholder="Guess the word" onfocus="this.placeholder = ''">
+			<br>
+			<input id="sBtn" type="button" value="GUESS" onclick="rGuess()">
+			<div id="results"></div>
+
 		</div>
 	</div>
 
