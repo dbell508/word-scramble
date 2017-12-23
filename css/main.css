@@ -68,8 +68,9 @@ button:focus {
 	width: 250px;
 	height: 50px;
 	font-weight: bold;
+	font-size: 22px;
 	margin: 25px;
-	padding-top: 5px;
+	padding-top: 2px;
 }
 
 #sBtn:hover{
