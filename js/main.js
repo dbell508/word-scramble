@@ -2,11 +2,15 @@
 var message = document.getElementById('message');
 var wordy = document.getElementById('wordy');
 var results = document.getElementById('results');
+var scoreHolder = document.getElementById('score');
+var sBtn = document.getElementById('sBtn');
 
-
-var myArr = ['javascript', 'hello', 'world', 'course'];
+var myArr = ['border', 'boxer', 'carpet', 'driver', 'elephant', 'wrench', 'sofa', 'helmet', 'treadmill', 'blanket', 'bridge', 'television', 'video','belt', 'clock'];
 window.onload = sWord;
 var randomWord;
+var score = 0;
+
+scoreHolder.innerHTML = score;
 
 
 // Generate random word
@@ -23,7 +27,7 @@ function sWord(){
 		w = w.substr(0,x) + w.substr(x+1);
 	}
 
-	message.innerHTML = 'See how many words you can unscramble!';
+	message.innerHTML = 'See how many words you can unscramble!<br><br>Score:';
 	s = s.toUpperCase();
 	wordy.innerText = s;
 }
@@ -32,10 +36,20 @@ function sWord(){
 function rGuess(){
 	var guess = document.getElementById('myString').value;
 	if(guess.toLowerCase() == randomWord.toLowerCase()){
-		results.innerHTML = 'CORRECT!';
+		results.innerHTML = 'CORRECT!<br><h2>+1</h2>';
+		scorePoint();
 	} else {
 		results.innerHTML = 'WRONG!';
 	}
 	sWord();
+	console.log(guess);
+}
+
+function scorePoint(){
+	score++;
+	if(score < 10){
+		score = '0'+score;
+	}
+	scoreHolder.innerHTML = score;
 }
 

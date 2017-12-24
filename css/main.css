@@ -9,10 +9,17 @@ body {
 
 .wordyGame {
 	text-align: center;
-	margin-top: 10%;
+	margin-top: 7%;
 }
 
-#wordy{
+#score{
+	background-color: #000;
+	color: #43e866;
+	font-size: 28px;
+	width: 100px;
+	margin: 5px auto;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 #wordy {
@@ -71,6 +78,7 @@ button:focus {
 	font-size: 22px;
 	margin: 25px;
 	padding-top: 2px;
+	transition: all ease 0.3s;
 }
 
 #sBtn:hover{
